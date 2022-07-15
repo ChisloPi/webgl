@@ -48,6 +48,7 @@ function animate() {
     initEventListeners();
 
     p += 1;
+    if (p == 20) p = 0;
     geometry = new THREE.TorusKnotGeometry(10, 1, 10000, 100, p, 10);
     scene.remove(torus);
     torus = new THREE.Mesh(geometry, material);
